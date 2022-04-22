@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package ttfegame;
 
-/**
- *
- * @author Антон
- */
+import ttfegame.logical.TTFEGraphic;
+import ttfegame.logical.SaveManager;
+import javax.swing.JFrame;
+
 public class Main {
-    
+    public static void main (String[] args){
+        JFrame window = new JFrame("TTFE Game");
+        SaveManager sm = new SimpleSaveManager();
+        TTFEGraphic grafic = new TTFETestGraphic(window);
+        //GameManager gm = new GameManager(grafic, sm);
+        //gm.start();
+    }
 }
