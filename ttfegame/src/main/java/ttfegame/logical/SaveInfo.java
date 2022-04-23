@@ -3,5 +3,5 @@ package ttfegame.logical;
 
 
 public interface SaveInfo {
-    public Slot[] getSlots();
+    public int[][] getSlots();
 }

@@ -3,6 +3,6 @@ package ttfegame.logical;
 
 
 public interface SaveManager {
-    public SaveSlot[] getSaveSlots();
+    public SaveSlot[][] getSaveSlots();
     public Statistic getStatistic();
 }

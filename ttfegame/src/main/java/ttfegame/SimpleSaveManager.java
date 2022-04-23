@@ -10,7 +10,7 @@ public class SimpleSaveManager implements SaveManager {
     public SimpleSaveManager() {
     }
     @Override
-    public SaveSlot[] getSaveSlots(){
+    public SaveSlot[][] getSaveSlots(){
         return null;
     }
     @Override
