@@ -22,6 +22,31 @@ public class GameManager {
     }
     
     public void rightShift(){
+        ArrayList<Integer>[] numbers = new ArrayList[currentField.length];
+        for(ArrayList<Integer> i : numbers){
+            System.out.print("+");
+            i = new ArrayList<>();
+        }
+        for(int k = 0; k < currentField.length; k++){
+            for(int i = currentField.length - 1; i >= 0; i--){
+                if(currentField[k][i] != 0){
+                    if(numbers[k].get(numbers[k].size() - 1).equals(currentField[k][i])) {
+                        numbers[k].set(numbers[k].size() - 1, (int)numbers[k].get(numbers[k].size() - 1) * 2);
+                    } else {
+                        numbers[k].add(currentField[k][i]);
+                    }
+                }
+            }
+        }
+        
+        for(int i = 0; i < currentField.length; i++)
+        {
+            int j = currentField.length - 1;
+            for(Integer k : numbers[i]){
+                currentField[i][j] = (int)k;
+                j--;
+            }
+        }
     }
     
     public void leftShift(){
@@ -38,7 +63,7 @@ public class GameManager {
     }
     
     public void loadSave(SaveSlot slot){
-        
+        currentField = slot.getLoadSave().getSlots();
     }
     
     public Statistic getStatistic(){
@@ -49,14 +74,15 @@ public class GameManager {
         ArrayList<Integer> freeCellsList = new ArrayList<>();
         for(int i = 0; i < currentField.length; i++){
             for(int j = 0; j < currentField.length; j++){
-                if(currentField[i][j] == 0)
+                if(currentField[i][j] == 0){
                     freeCellsList.add(i*10+j);
+                }
             }
         }
-        Arrays.deepToString();
-        int value = (int) Math.random() * 100;
+        
+        int value = (int) (Math.random() * 100);
         value = value >= 90 ? 4 : 2;
-        int coor = freeCellsList.get((int) Math.random() * (freeCellsList.size()-1));
+        int coor = freeCellsList.get((int) (Math.random() * (freeCellsList.size()-1)));
         currentField[(coor - (coor % 10))/10][coor%10] = value;
     }
 }

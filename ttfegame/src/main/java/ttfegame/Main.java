@@ -9,18 +9,12 @@ import javax.swing.JFrame;
 public class Main {
     public static void main (String[] args){
         GameManager gm = new GameManager(null,5);
-        Arrays.stream(gm.currentField).map(Arrays::toString).forEach(System.out::println);
-        System.out.println();
         gm.newRound();
-        Arrays.stream(gm.currentField).map(Arrays::toString).forEach(System.out::println);
-        System.out.println();
         gm.newRound();
-        Arrays.stream(gm.currentField).map(Arrays::toString).forEach(System.out::println);
-        System.out.println();
         gm.newRound();
-        Arrays.stream(gm.currentField).map(Arrays::toString).forEach(System.out::println);
-        System.out.println();
         gm.newRound();
+        gm.rightShift();
         Arrays.stream(gm.currentField).map(Arrays::toString).forEach(System.out::println);
+        
     }
 }
