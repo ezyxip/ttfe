@@ -23,14 +23,13 @@ public class GameManager {
     
     public void rightShift(){
         ArrayList<Integer>[] numbers = new ArrayList[currentField.length];
-        for(ArrayList<Integer> i : numbers){
-            System.out.print("+");
-            i = new ArrayList<>();
+        for(int i = 0; i < numbers.length; i++){
+            numbers[i] = new ArrayList<>();
         }
         for(int k = 0; k < currentField.length; k++){
             for(int i = currentField.length - 1; i >= 0; i--){
                 if(currentField[k][i] != 0){
-                    if(numbers[k].get(numbers[k].size() - 1).equals(currentField[k][i])) {
+                    if(!numbers[k].isEmpty() && numbers[k].get(numbers[k].size() - 1).equals(currentField[k][i])) {
                         numbers[k].set(numbers[k].size() - 1, (int)numbers[k].get(numbers[k].size() - 1) * 2);
                     } else {
                         numbers[k].add(currentField[k][i]);
@@ -38,7 +37,7 @@ public class GameManager {
                 }
             }
         }
-        
+        currentField = new int[currentField.length][currentField.length];
         for(int i = 0; i < currentField.length; i++)
         {
             int j = currentField.length - 1;

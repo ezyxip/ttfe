@@ -13,6 +13,8 @@ public class Main {
         gm.newRound();
         gm.newRound();
         gm.newRound();
+        Arrays.stream(gm.currentField).map(Arrays::toString).forEach(System.out::println);
+        System.out.println();
         gm.rightShift();
         Arrays.stream(gm.currentField).map(Arrays::toString).forEach(System.out::println);
         
