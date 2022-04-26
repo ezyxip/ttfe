@@ -15,7 +15,7 @@ public class Main {
         gm.newRound();
         Arrays.stream(gm.currentField).map(Arrays::toString).forEach(System.out::println);
         System.out.println();
-        gm.rightShift();
+        gm.bottomShift();
         Arrays.stream(gm.currentField).map(Arrays::toString).forEach(System.out::println);
         
     }
