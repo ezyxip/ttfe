@@ -1,5 +1,5 @@
 
-package ttfegame;
+package ttfegame.logical;
 
 import java.util.ArrayList;
 import java.util.Arrays;

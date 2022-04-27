@@ -1,5 +1,5 @@
 
-package ttfegame;
+package ttfegame.logical;
 
 import ttfegame.logical.Statistic;
 
