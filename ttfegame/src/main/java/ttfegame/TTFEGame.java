@@ -11,13 +11,12 @@ import javax.swing.JPanel;
 public class TTFEGame {
     JFrame jf;
     GraphicOperator menuOperator;
-    GraphicOperator saveOperator;
-    GraphicOperator gameFieldOperator;
     public TTFEGame(String name){
         jf = new JFrame(name);
         menuOperator = new GameMenu(jf);
-        saveOperator = new SaveMenu(jf);
-        gameFieldOperator = new GameField(jf);
+        GraphicOperator saveOperator = new SaveMenu(jf);
+        GraphicOperator gameFieldOperator = new GameField(jf);
+        menuOperator.setTransition(saveOperator, gameFieldOperator);
         jf.setExtendedState(JFrame.MAXIMIZED_BOTH);
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel jp = new JPanel(new FlowLayout(FlowLayout.CENTER)); 
