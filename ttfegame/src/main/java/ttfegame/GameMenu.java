@@ -6,6 +6,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -39,9 +41,11 @@ public class GameMenu extends GraphicOperator {
         //Центральная паенелька с кнопками сохранения и игры
         JPanel jp1 = new JPanel(new GridLayout(3, 0, 50, 50));
         JButton startButton = new JButton("Начать игру");
+        startButton.addActionListener(getOps()[1]);
         startButton.setBackground(color1);
         startButton.setPreferredSize(new Dimension(300,150));
         JButton saveButton = new JButton("Сохранения");
+        saveButton.addActionListener(getOps()[0]);
         saveButton.setBackground(color2);
         saveButton.setPreferredSize(new Dimension(300,150));
         jp1.add(startButton);
@@ -51,6 +55,7 @@ public class GameMenu extends GraphicOperator {
         JPanel jpBottom = new JPanel(new GridLayout(0,2));
         jpBottom.setPreferredSize(new Dimension(100,100));
         JButton exitButton = new JButton("Выход");
+        exitButton.addActionListener(getOps()[2]);
         exitButton.setBackground(color3);
         exitButton.setPreferredSize(new Dimension(160, 80));
         JButton infoButton = new JButton("Статистика");
@@ -63,7 +68,6 @@ public class GameMenu extends GraphicOperator {
         jpBottom.add(infoPanel);
         jpBottom.add(exitPanel);
         jf.add(jpBottom, BorderLayout.SOUTH);
-        jf.getContentPane().setBackground(Color.RED);
 //        JLabel text = new JLabel("Начальное меню");
         jf.revalidate();
         jf.repaint();

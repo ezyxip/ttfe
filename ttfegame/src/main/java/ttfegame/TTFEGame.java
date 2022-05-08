@@ -16,8 +16,10 @@ public class TTFEGame {
         menuOperator = new GameMenu(jf);
         GraphicOperator saveOperator = new SaveMenu(jf);
         GraphicOperator gameFieldOperator = new GameField(jf);
-        menuOperator.setTransition(saveOperator, gameFieldOperator);
+        GraphicOperator exitOperator = new ExitOperator(jf);
+        menuOperator.setTransition(saveOperator, gameFieldOperator, exitOperator);
         jf.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        jf.setUndecorated(true);
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel jp = new JPanel(new FlowLayout(FlowLayout.CENTER)); 
         JLabel welcomeText = new JLabel("Игра запускается...");
