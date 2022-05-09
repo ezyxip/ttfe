@@ -69,6 +69,13 @@ public class GameMenu extends GraphicOperator {
         jpBottom.add(exitPanel);
         jf.add(jpBottom, BorderLayout.SOUTH);
 //        JLabel text = new JLabel("Начальное меню");
+        //Боковые панельки для смотрибельности
+        JPanel leftPanel = new JPanel();
+        JPanel rightPanel = new JPanel();
+        leftPanel.setPreferredSize(new Dimension(300,300));
+        rightPanel.setPreferredSize(new Dimension(300,300));
+        jf.add(leftPanel, BorderLayout.EAST);
+        jf.add(rightPanel, BorderLayout.WEST);
         jf.revalidate();
         jf.repaint();
     }
