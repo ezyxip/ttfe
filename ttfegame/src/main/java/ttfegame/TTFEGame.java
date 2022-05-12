@@ -23,7 +23,7 @@ public class TTFEGame {
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel jp = new JPanel(new FlowLayout(FlowLayout.CENTER)); 
         JLabel welcomeText = new JLabel("Игра запускается...");
-        jp.add(welcomeText);
+//        jp.add(welcomeText);
         jf.add(jp, BorderLayout.CENTER);
         
         jf.setVisible(true);

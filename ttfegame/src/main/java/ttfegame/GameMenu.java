@@ -33,8 +33,9 @@ public class GameMenu extends GraphicOperator {
         //передача опреатору экрана игры указателя на оператор меню
         ops[1].setTransition(this);
         //Импровизированная очистка окна
-        jf.setContentPane(new JPanel());
+//        jf.setContentPane(new JPanel());
         jf.setLayout(new BorderLayout());
+        jf.getContentPane().setBackground(color0);
         JPanel jpTop = new JPanel();
         jpTop.setPreferredSize(new Dimension(100,100));
         jf.add(jpTop, BorderLayout.NORTH);

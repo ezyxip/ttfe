@@ -12,7 +12,9 @@ public class SaveMenu extends GraphicOperator {
 
     @Override
     public void setActive() {
-        
+        jf.removeAll();
+        jf.repaint();
+        jf.revalidate();
     }
     
 }
