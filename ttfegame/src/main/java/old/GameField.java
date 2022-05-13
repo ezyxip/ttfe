@@ -1,5 +1,5 @@
 
-package ttfegame;
+package old;
 
 import javax.swing.JFrame;
 

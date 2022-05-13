@@ -1,5 +1,5 @@
 
-package ttfegame;
+package old;
 
 import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
