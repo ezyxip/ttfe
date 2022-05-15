@@ -8,7 +8,5 @@ public class Main {
         //Конфигурация игры - дело тяжёлое. Лучше всего оборачивать это в строитель
         game.configurate(new SimpleConfiguration());
         game.start();
-        
-        
     }
 }

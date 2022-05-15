@@ -1,6 +1,8 @@
 
 package ttfegame;
 
+import ttfegame.logical.SaveManager;
+
 public class SimpleConfiguration implements GameConfiguration{
 
     public SimpleConfiguration() {
