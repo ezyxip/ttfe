@@ -2,6 +2,7 @@
 package ttfegame;
 
 import javax.swing.JFrame;
+import ttfegame.logical.SaveManager;
 
 /*Предназначение этого класса - собрать в кучку множество информации, которая
 вводится на начало игры из main.
