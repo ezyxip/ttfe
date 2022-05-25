@@ -11,7 +11,7 @@ import java.util.ArrayList;
 */
 public class ScreenMap {
     
-    static Screen getScreen(ScreenList screenList) {
+    Screen getScreen(ScreenList screenList) {
         return new SaveMenuScreen();
     }
     public void add(Screen sc, Enum key){}

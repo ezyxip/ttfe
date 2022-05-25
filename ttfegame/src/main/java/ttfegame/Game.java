@@ -19,6 +19,16 @@ public class Game {
     public Game(){
     }
     
+    public Game(GameConfiguration gc){
+        configurate(gc);
+    }
+    
+    public Game(String gameTitle, SaveManager saves, ScreenMap screenMap){
+        setGameTitle(gameTitle);
+        setSaveManager(saves);
+        setScreenMap(screenMap);
+    }
+    
     public void setGameTitle(String gameTitle){
         this.gameTitle = gameTitle;
     }
@@ -47,6 +57,6 @@ public class Game {
     public void start(){
         JFrame mainWindow = GameWindow.getMainWindow();
         mainWindow.setVisible(true);
-        ScreenMap.getScreen(ScreenList.WELCOME).setActive();
+        screenMap.getScreen(ScreenList.WELCOME).setActive();
     }
 }
